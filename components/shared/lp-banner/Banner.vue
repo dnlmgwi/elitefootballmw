@@ -11,8 +11,8 @@
               Take on the elite in a 5v5 intense competitive experience.
             </h1>
             <h4 class="banner-subtitle white--text font-weight-regular">
-              Express your style on and off the pitch, discover new ways get the
-              most out of the Elite Football experience.
+              Express your style on and off the pitch, discover new ways to get
+              the most out of the Elite Football experience.
             </h4>
             <div class="mt-16 pt-2">
               <!-- <v-btn
