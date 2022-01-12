@@ -106,38 +106,19 @@
 export default {
   name: "UiTable",
   data() {
-    console.log(this.leagues);
     return {
       teams: [],
-      leagues: [],
-      selectedLeague: null,
     };
   },
 
   async fetch() {
-    this.teams = await fetch(
-      "https://radiant-wildwood-51737.herokuapp.com/api/leagues/table/1"
-    )
+    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/1")
       .then((res) => res.json())
       .catch((err) => {
         console.error(err);
         this.$fetchState.error = true;
       });
-
-    // this.leagues = await fetch(
-    //   "https://radiant-wildwood-51737.herokuapp.com/api/leagues"
-    // )
-    //   .then((res) => res.json())
-    //   .catch((err) => {
-    //     console.error(err);
-    //     this.$fetchState.error = true;
-    //   });
   },
-  methods: {
-    changeLeague(event) {
-      this.selectedLeague =
-        event.target.options[event.target.options.selectedIndex].text;
-    },
-  },
+  methods: {},
 };
 </script>

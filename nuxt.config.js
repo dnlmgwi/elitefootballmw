@@ -48,7 +48,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/http"],
+  modules: ['@nuxtjs/dotenv'],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -58,6 +58,10 @@ export default {
     options: {
       customProperties: true
     }
+  },
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
