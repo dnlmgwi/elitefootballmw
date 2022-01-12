@@ -17,9 +17,24 @@
       ----------------------------------------------- -->
         <v-col cols="12" sm="12" md="12" lg="3" class="px-xs-0">
           <h4 class="font-weight-regular font-18">Phone</h4>
-          <p class="mt-10 mb-0">Frank : +205 123 4567</p>
-          <p>Micheal : +207 235 7890</p>
-          <p>Daniel : +207 235 7890</p>
+          <p class="mt-10 mb-0">
+            Frank:
+            <a class="mt-10 mb-0" href="https://wa.me/265885374883"
+              >+265 885 37 48 83</a
+            >
+          </p>
+          <p class="mt-10 mb-0">
+            Michael:
+            <a class="mt-10 mb-0" href="https://wa.me/265994461051"
+              >+265 994 46 10 51</a
+            >
+          </p>
+          <p class="mt-10 mb-0">
+            Daniel:
+            <a class="mt-10 mb-0" href="https://wa.me/265997176756"
+              >+265 997 17 67 56</a
+            >
+          </p>
         </v-col>
         <!-- -----------------------------------------------
         Third Column
@@ -28,12 +43,14 @@
           <h4 class="font-weight-regular font-18">Email</h4>
           <p class="mt-10 mb-0">
             Office :
-            <a class="dark-link" href="/">elitefootballmalawi@gmail.com</a>
+            <a class="dark-link" href="mailto:elitefootballmalawi@gmail.com"
+              >elitefootballmalawi@gmail.com</a
+            >
           </p>
           <p>
             Site :
-            <a class="dark-link" href="https://elitesportsmw.vercel.com/"
-              >elitesportsmw.vercel.com</a
+            <a class="dark-link" href="https://elitefootballmw.vercel.app/"
+              >elitefootballmw.vercel.app</a
             >
           </p>
         </v-col>
@@ -66,7 +83,7 @@
         <div class="d-block d-md-flex align-center">
           <p>
             All Rights Reserved by
-            <a href="https://elitesportsmw.vercel.com/" class="link"
+            <a href="https://elitefootballmw.vercel.app/" class="link"
               >Elite Sports Group Malawi</a
             >
           </p>
