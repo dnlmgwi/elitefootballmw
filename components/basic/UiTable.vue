@@ -31,14 +31,16 @@
             <div class="text-center">
               <!-- <select class="form-control" @change="changeLeague($event)">
                 <option value="" selected disabled>Choose</option>
+                console.log(leagues)
                 <option
-                  v-for="league of leagues"
+                  v-for="league in leagues"
                   :value="league.id"
-                  :key="league.id" style="color: #000000"
+                  :key="league.id"
+                  style="color: #000000"
                 >
-                  {{ league.data.id }}
-                </option> -->
-              <!-- </select> -->
+                  {{ league.attributes.name }}
+                </option>
+              </select> -->
               <!-- <v-btn v-on:click="$fetch" class="refresh-button" elevation="1"
                 >Refresh</v-btn
               > -->
@@ -103,22 +105,45 @@
   </div>
 </template>
 <script>
+// import { gql } from "nuxt-graphql-request";
+
 export default {
   name: "UiTable",
   data() {
     return {
       teams: [],
+      // leagues: {},
     };
   },
 
-  async fetch() {
-    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/1")
+  async fetch({ $graphql, params }) {
+    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/2")
       .then((res) => res.json())
       .catch((err) => {
         console.error(err);
         this.$fetchState.error = true;
       });
+
+    // const query = gql`
+    //   query {
+    //     leagues {
+    //       data {
+    //         id
+    //         attributes {
+    //           name
+    //         }
+    //       }
+    //     }
+    //   }
+    // `;
+
+    // this.leagues = await $graphql.default
+    //   .request(query)
+    //   .then((res) => res.json());
+
+    // console.log("Leagues", this.leagues);
   },
+
   methods: {},
 };
 </script>
