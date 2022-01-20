@@ -29,21 +29,24 @@
         <v-row justify="center">
           <v-col cols="12" sm="10" md="9" lg="7">
             <div class="text-center">
+              <div class="pb-6">
+                <v-btn v-on:click="$fetch" class="refresh-button" elevation="1"
+                  >Refresh</v-btn
+                >
+              </div>
+
               <!-- <select class="form-control" @change="changeLeague($event)">
                 <option value="" selected disabled>Choose</option>
-                console.log(leagues)
+
                 <option
                   v-for="league in leagues"
                   :value="league.id"
                   :key="league.id"
                   style="color: #000000"
                 >
-                  {{ league.attributes.name }}
+                  {{ league.name }}
                 </option>
               </select> -->
-              <!-- <v-btn v-on:click="$fetch" class="refresh-button" elevation="1"
-                >Refresh</v-btn
-              > -->
               <p v-if="$fetchState.pending" justify="center">
                 Fetching teams...
               </p>
@@ -105,43 +108,36 @@
   </div>
 </template>
 <script>
-// import { gql } from "nuxt-graphql-request";
+import gql from "graphql-tag";
+
+export const query = gql`
+  query {
+    leagues {
+      data {
+        id
+        attributes {
+          name
+        }
+      }
+    }
+  }
+`;
 
 export default {
   name: "UiTable",
   data() {
     return {
       teams: [],
-      // leagues: {},
     };
   },
 
-  async fetch({ $graphql, params }) {
-    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/2")
+  async fetch() {
+    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/1")
       .then((res) => res.json())
       .catch((err) => {
         console.error(err);
         this.$fetchState.error = true;
       });
-
-    // const query = gql`
-    //   query {
-    //     leagues {
-    //       data {
-    //         id
-    //         attributes {
-    //           name
-    //         }
-    //       }
-    //     }
-    //   }
-    // `;
-
-    // this.leagues = await $graphql.default
-    //   .request(query)
-    //   .then((res) => res.json());
-
-    // console.log("Leagues", this.leagues);
   },
 
   methods: {},
