@@ -27,6 +27,9 @@
                 Leaderboard
               </n-link>
             </li>
+            <li class="nav-item" text>
+              <n-link class="nav-link" nuxt to="/rules"> Rules </n-link>
+            </li>
             <!-- <li class="nav-item">
              
               <v-btn

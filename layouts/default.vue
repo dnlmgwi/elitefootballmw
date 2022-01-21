@@ -13,12 +13,12 @@
 export default {
   head() {
     return {
-      title: "NuxtJs UI kit | Free UI kit built with Vuetify",
+      title: "Elite Football",
       meta: [
         {
           hid: "description",
-          name: "NuxtJs UI kit",
-          content: "NuxtJs UI kit is the best way"
+          name: "description",
+          content: "Join together with up to 7 friends, take on the elite in 5v5 intense competitive experience."
         }
       ]
     };

@@ -20,6 +20,14 @@
   align-items: center;
 }
 
+.banner-wrapper-rules {
+  background: #212226;
+  padding: 20px 0 20px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 767px) {
   .banner-title {
     font-size: 29px;

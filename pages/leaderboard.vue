@@ -28,7 +28,7 @@ export default {
 
     ComingSoon: () => import("@/components/shared/coming-soon/ComingSoon"),
     UiTable: () => import("@/components/basic/UiTable.vue"),
-
+    
     // UiForm: () => import("../components/basic/UiForm"),
     // AllComponents: () => import("@/components/basic/AllComponents"),
   },
