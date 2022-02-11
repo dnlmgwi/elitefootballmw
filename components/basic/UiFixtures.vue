@@ -11,7 +11,7 @@
               <h2 class="banner-title font-weight-bold white--text">
                 Fixtures
               </h2>
-              <p class="white--text">Get your fixture ready, here we go!</p>
+              <p class="white--text">Get your squad ready, here we go!</p>
             </div>
           </v-col>
         </v-row>
