@@ -9,7 +9,7 @@
           <v-col cols="12" sm="10" md="9" lg="7">
             <div class="text-center">
               <h2 class="banner-title font-weight-bold white--text">
-                Fixtures
+                Upcoming Fixtures
               </h2>
               <p class="white--text">Get your squad ready, here we go!</p>
             </div>
@@ -61,7 +61,6 @@
                       <thead>
                         <tr>
                           <th>ID</th>
-                          <th>Date</th>
                           <th>Time</th>
                           <th>Home Team</th>
                           <th>Away Team</th>
