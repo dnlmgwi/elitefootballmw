@@ -111,8 +111,6 @@ export default {
         console.error(err);
         this.$fetchState.error = true;
       });
-
-    console.log(this.fixtures);
   },
 
   methods: {},
