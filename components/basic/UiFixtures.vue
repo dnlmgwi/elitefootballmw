@@ -60,7 +60,7 @@
                     <template v-slot:default>
                       <thead>
                         <tr>
-                          <th></th>
+                          <th>ID</th>
                           <th>Date</th>
                           <th>Time</th>
                           <th>Home Team</th>
@@ -72,7 +72,7 @@
                           <td style="text-align: center" rowspan="1">
                             {{ fixture.id }}
                           </td>
-                          <td rowspan="1">{{ fixture.match_date }}</td>
+                          <!-- <td rowspan="1">{{ fixture.match_date }}</td> -->
                           <td style="text-align: center" rowspan="1">
                             {{ fixture.match_time }}
                           </td>
