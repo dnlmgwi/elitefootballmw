@@ -117,7 +117,13 @@ export default {
   },
 
   async fetch() {
-    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/1")
+    this.teams = await fetch(process.env.baseUrl + "/api/leagues/table/1", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-control-allow-origin": "https://elitefootballmw.vercel.app",
+      },
+    })
       .then((res) => res.json())
       .catch((err) => {
         console.error(err);
